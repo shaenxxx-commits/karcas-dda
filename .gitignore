@@ -1,0 +1,18 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Local / private
+*.local.md
+*.private.md
+.env
+.env.*
+
+# Temp
+*.tmp
+~$*

@@ -1,0 +1,41 @@
+# 00_ENTRY.md
+Точка входа для LLM-агентов. Читать первым.
+
+## Проект
+KARCAS-DDA — универсальный каркас проектов на основе Documentation-Driven Architecture (DDA Framework v1.1, pilot).
+
+## Обязательный порядок чтения
+1. INVARIANTS.md
+2. CURRENT_STATE.md
+3. DECISIONS.md (только записи со статусом accepted, не superseded)
+4. PROVENANCE.md — при работе с данными или утверждениями
+5. docs/KNOWLEDGE_STATES.md — при работе со статусами знания
+6. docs/VISION.md — при необходимости понять границы
+7. docs/METHOD.md — если выполняется исследовательская или полевая работа
+8. docs/ARCHITECTURE.md — если проект содержит код или инфраструктуру
+
+## Non-negotiables
+- Не нарушать правила из INVARIANTS.md
+- Не повышать статус знания без явного основания и фиксации перехода
+- Любое значимое решение фиксировать в DECISIONS.md
+- Не удалять документы. Устаревшее перемещать в ARCHIVE/ с датой и причиной
+- Не разрешать противоречия между документами самостоятельно
+
+## Протокол при ошибках и конфликтах
+- Если обязательный документ отсутствует → остановиться и сообщить об этом. Не выдумывать содержание.
+- Если документы противоречат друг другу → зафиксировать противоречие и не продолжать действия, зависящие от него.
+- Если статус утверждения неясен → не повышать его. Отметить как UNKNOWN или HYPOTHESIS.
+- Если полномочия на изменение инвариантов или границ проекта не определены → не вносить такие изменения.
+- Если проверка состояния необходима, но невозможна → явно отметить ограничение.
+
+## Raw-ссылки (заполнить перед использованием)
+При форке заменить `shaenxxx-commits/karcas-dda` на актуальные `<USER>/<REPO>`.
+- INVARIANTS: https://raw.githubusercontent.com/shaenxxx-commits/karcas-dda/main/INVARIANTS.md
+- CURRENT_STATE: https://raw.githubusercontent.com/shaenxxx-commits/karcas-dda/main/CURRENT_STATE.md
+- DECISIONS: https://raw.githubusercontent.com/shaenxxx-commits/karcas-dda/main/DECISIONS.md
+- PROVENANCE: https://raw.githubusercontent.com/shaenxxx-commits/karcas-dda/main/PROVENANCE.md
+- KNOWLEDGE_STATES: https://raw.githubusercontent.com/shaenxxx-commits/karcas-dda/main/docs/KNOWLEDGE_STATES.md
+
+## Scope
+Работать строго в рамках текущего CURRENT_STATE.md.
+Не расширять границы проекта без явного решения Архитектора.
